@@ -9,9 +9,9 @@ import os
 load_dotenv()
 
 # Get environment variables
-PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-INDEX_NAME = st.secrets["PINECONE_INDEX_NAME"]
+PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+INDEX_NAME = os.getenv('PINECONE_INDEX_NAME')
 
 # Page configuration
 st.set_page_config(
