@@ -1,0 +1,4 @@
+pinecone
+tiktoken
+langchain-community
+bs4
