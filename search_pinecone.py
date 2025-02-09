@@ -44,7 +44,7 @@ class PineconeSearcher:
                 metadata = match.metadata
                 context += f"""Text: {metadata['text']}
                              URL: {metadata['url']}
-                             Similarity Score: {match.score:.2f}\n\n"""
+                             \n\n"""
                 source_docs.append(metadata)
 
             print("Context prepared")
