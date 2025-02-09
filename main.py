@@ -3,14 +3,13 @@ from upsert_pinecone import PineconeUpserter
 from typing import List
 from dotenv import load_dotenv
 import os
-import streamlit as st
 # Load environment variables from .env file
 load_dotenv()
 
 # Get environment variables
-PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-INDEX_NAME = st.secrets["PINECONE_INDEX_NAME"]
+PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+INDEX_NAME = os.getenv('PINECONE_INDEX_NAME')
 
 # Validate environment variables
 if not all([PINECONE_API_KEY, OPENAI_API_KEY, INDEX_NAME]):
